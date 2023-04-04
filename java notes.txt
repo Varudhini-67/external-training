@@ -1,0 +1,1227 @@
+***************JAVA NOTES***************
+
+java created in 1995(project 'oak')
+**james gasoling
+object oriented language
+WORA(write onces run anywhere)
+
+JVM(java virtual machine)
+it is a specification that provides a runtime environment in which java bytecode can be executed.
+jvm work to do(loads code,verifies code,executes codes,provides runtime environment)
+
+JRE(java runtime environment)
+>>it is the implementation of jvm
+it physically exists.it contains a set of libraries + other files that JDM uses at runtime
+
+JDK(java development kit)
+
+java data types
+-------------------------------------------------
+value           type        size     range
+-------------------------------------------------
+5		byte         1      -128 to 127
+45		short 	     2	    -32768,32767
+12              int          4         
+67L		long	     8      
+34.2f		float	     4       6 to 7 decimal digits
+36.2		double	     8	     15 decimal digits
+"a"		char	     2        
+true/false	boolean      1       true or false
+"hello"		string	     
+
+***************************************************************************************
+class HelloWorld {
+    public static void main(String[] args) {
+        int a=5 ,b=7,c=9,t=0;
+        if (a>=b && a>=c)t=a;
+        else if(b>=a && b>=c)t=b;
+        else t=c;
+            System.out.println(t);
+     
+    }
+}
+
+**********************************************************************************
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int a=5 ,b=75754,c=9,t=0;
+        System.out.println(Math.max(Math.max(a,b),c));
+     
+    }
+}
+		
+
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+	    byte a=5; String b="3";
+		System.out.print(a+b);
+		 
+	}
+}
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+
+{
+	public static void main(String[] args) 
+	{
+	    Scanner inp=new Scanner(System.in);
+	    System.out.print("enter inputs:");
+	    int a=inp.nextInt(),b=inp.nextInt();
+		System.out.print("sum:"+(a+b));
+		 
+	}
+}
+***********************************************************************************
+inputs                          methods
+___________________________________________________________________________________
+byte				.nextByte()
+short				.nextShort()
+int				.nextInt()
+long				.nextLong()
+float				.nextFloat()
+double				.nextDouble()
+String				.next(){for one word}
+string				.nextLine(){for a line(till \n}
+boolean				.nextBoolean()
+____________________________________________________________________________________________________
+oop's
+------
+1. object
+2. classes
+3. principles(abstraction,encaplusation,inheritance,polymerphosim)
+
+1st oop language is simula.
+1st purely oop language is smalltalk.
+class is a blueprint for an object.
+object instance of the class.
+.java is a class
+___________________________________________________________________________
+class iarestudent{int id;String name,branch;}
+public class Main{
+    public static void main(String[] args){
+        iarestudent stud1 = new iarestudent();
+        stud1.id=123;stud1.name="varu";
+        stud1.branch="ece";
+        System.out.println("id:" +stud1.id);
+        System.out.println("name:" +stud1.name);
+        System.out.println("branch:" +stud1.branch);
+        
+    }
+}
+------------------------------------------------------------------
+class iarestudent{String id;String name,branch;}
+public class Main{
+    public static void main(String[] args){
+        iarestudent stud1 = new iarestudent();
+        stud1.id="n5";stud1.name="varu";
+        iarestudent stud2 = new iarestudent();
+        stud2.id="m5";stud2.name="vaishu";
+        System.out.println(stud1.id + " "+stud1.name);
+        System.out.println(stud2.id +" "+ stud2.name);
+       // System.out.println("branch:" +stud1.branch);
+        
+    }
+}
+-------------------------------------------------------------------------
+class iarestudent{String id;String name,branch;}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int arr[] =new int[15];
+        arr[0]=12;arr[1]=67;arr[4]=90;arr[8]=65;
+        for(int i=0;i<=arr.length;i++)
+        System.out.print(arr[i]+" ");
+        
+    }
+}
+----------------------------------------------------------------------------------
+
+class iarestudent{String id;String name,branch;}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int arr[] =new int[]{12,4,5,6,7,89};
+        for(int i=0;i<=arr.length;i++)
+        System.out.print(arr[i]+" ");
+        
+    }
+}
+------------------------------------------------------------------------------
+class iarestudent{String id;String name,branch;}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int arr[] =new int[]{12,4,4,5,6,7,89};
+        for(int i:arr)
+        System.out.print(i+" ");
+        
+    }
+}
+=--------------------------------------------
+lavanya number: 7601080423
+----------------------------------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    static boolean primecheck(long n){
+        if(n<=1) return false;
+        if(n!=2 && n%2==0) return false;
+        for(long i=3;i<=Math.sqrt(n);i+=2)
+            if(n%i==0) return false;
+        return true;
+    }
+    
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        long arr[]=new long[n];
+        for(int i=n-1;i>=0;i--)  arr[i]=sc.nextLong();
+        for(long i:arr)
+            if(primecheck(i)) System.out.print(i+" ");
+    }
+}
+-----------------------------------------------------------------------
+charactors are "" cotes
+string are '' single cotes
+In java there is no negative indexing.
+
+-----------------------------------------------------------------------------
+28/02/2023
+
+
+
+class
+object
+constructor....default method..multiple can be possible...constructor over loading...types(2) parameteraised..
+encapsulation(can be achieved by wraping the content ...1.using classes..2.using packages.)(wraping the properties of the class under a entity called class).
+access specifiers
+exceptional handling
+geters and seters methods...to access private variables/methods outside the class indirectly.(private method can be accessed by geter method.calling a private method inside a public method).
+
+inheritance
+abstraction 
+polymorphism
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		String a[];
+		a=retailer();
+		
+	}
+	
+	Class Bike{
+	   String name;
+	   String model;
+	   int year;
+	   public Bike(String name,int year,String model){
+	       this.name=name;
+	       this.model=model;
+	       this.year=year;
+	   }
+	   
+	}
+	
+	Class Dealer{
+	    Bike b1= new Bike("meteor",2020,"360");
+	    Bike b2= new Bike("comet",2021,"365");
+	    Bike b3= new Bike("rock",2022,"400");
+	    Bike arr[]={b1,b2,b3};
+	    public boolean check(Bike b){
+	        
+	        return false;
+	    }
+	    
+	}
+	Class ask_
+}
+
+----------------------------------------------------------------------------------------------------------
+INHERITANCE
+
+GETTING/ACQUIRE/INHERIT PROPERTIES OF PARENT CLASS
+
+types of inheritance(5 types)
+
+single level
+multi level
+hierarchical 
+mutliple ......................java doesnt support
+hybrid
+
+
+SINGLE LEVEL(1 PARENT 1 CHILD)
+        
+              CLASS A
+                 ^
+                 .
+                 .
+              CLASS B
+
+MULTI LEVEL(1 PARENT AND CHILD ACTS AS A PARENT TO ANOTHER CHILD)
+            
+              CLASS A
+                 ^
+                 .
+                 .
+              CLASS B
+                 ^            
+                 .
+                 .
+              CLASS C
+
+HIERARCHICAL(1 PARENT MULTIPLE CHILD CLASSES(SIBLING CLASSES)
+MULTIPLE (MULTIPLE PARENT AND SINGLE CHILD)(DIAMOND PROBLEM)(CAN BE DONE USING INTERFACE METHOD)
+A CHILD CAN INHERIT PROPERTIES FROM MORE THAN 1 PARENT CLASSES.
+HYBRID(COMBINATION OF TWO OR MORE INHERITANCE TYPES)
+
+------------------------------------------------------------------------------------------------------------
+
+SINGLE INHERITANCE
+
+class A{
+    String name=" in class A";
+    public void welcome(){
+        System.out.println("Welcome to class A");
+        
+    }
+}
+class B extends A{
+    
+}
+public class Sample{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.name);
+        ob.welcome();
+    }
+}
+
+
+output:
+in class A
+Welcome to class A
+
+----------------------------------------------------------------------------------------------------
+
+
+MULTI-LEVEL
+
+when a object is called it checks if name obl is there or no in class b then in class a.
+          
+
+class A{
+    String name_1=" in class A";
+    public void welcome(){
+        System.out.println("Welcome to class A");
+        
+    }
+}
+class B extends A{
+    String name_2=" in class B";
+    public void home(){
+        System.out.println("Welcome home to class B");
+}
+class C extends B{
+    public void zoo(){
+        System.out.println("welcome to zoo");
+    }
+}
+
+
+public class Sample{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.name);
+        ob.welcome();
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+HIERARCHICAL INHERITANCE
+
+
+class A{
+    String name_1=" in class A";
+    public void welcome(){
+        System.out.println("Welcome to class A");
+        
+    }
+}
+class B extends A{
+    String name_2=" in class B";
+    public void home(){
+        System.out.println("Welcome home to class B");
+}
+class C extends A{
+    public void zoo(){
+        System.out.println("welcome to zoo");
+    }
+}
+
+
+public class Sample{
+    public static void main(String[] args){
+        B ob=new B();
+        System.out.println(ob.name);
+        ob.welcome();
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------
+hierarchical inheritance
+
+
+class parent{
+    String p_name="Manik";
+    public void p_job(){
+        System.out.println("Manik is a singer");
+        
+    }
+}
+class c1 extends parent{
+    String ch_1="pinky";
+    public void prop1(){
+        System.out.println("she is 5 years old");
+}
+}
+class c2 extends parent{
+    String ch_2="dimple";
+    public void prop2(){
+        System.out.println("she is 7 years old");
+    }
+}
+
+
+public class Sample{
+    public static void main(String[] args){
+        c2 ob=new c2();
+        System.out.println(ob.ch_2);
+        ob.p_job();
+    }
+} 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+multiple inheritance(2 parents have same method the extended class gives error when this method is called)
+
+class A{
+    
+    public void welcome(){
+        System.out.println("welcome to class A");
+        
+    }
+}
+class B{
+    
+    public void welcome(){
+        System.out.println("welcome to class B");
+}
+}
+class C {
+    
+}
+
+
+public class Sample{
+    public static void main(String[] args){
+        B ob= new B();
+        
+    }
+} 
+
+ADV
+
+CODE REUSABILITY
+
+-----------------------------------------------------------------------------------------------------------------------------------
+INTERFACE
+
+the variables in interface are always public ,static and finite(cant be changed).
+class like structure.
+OBJECTS CAN NOT BE CREATED FOR AN INSTERFACE.
+
+interface A{
+   /* static final float pi=3.14f;*/
+   float pi=3.14f;
+    public void welcome();
+    public void something();
+}
+interface B{
+    
+    public void welcome();
+}
+class C implements A,B
+{
+    /*public int welcome(){}
+      public void welcome1(){}*/
+    public void welcome(){
+        System.out.println("welcome to class C");
+    }
+    public void something(){
+        
+    }
+}
+
+
+public class Sample{
+    public static void main(String[] args){
+        B ob= new B();
+        
+    }
+} 
+    
+-------------------------------------------------------------------------------------------------------------------------------
+
+we know the functionality but not what exactly is happening
+hiding the what exactly is happening
+ABSTRACTION
+POLYMORPHISM
+A METHOD ACTING DIFFERENTLY IN DIFFERENT SITUATIONS.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+ARRAYLIST
+
+import java.util.*;
+public class Sample{
+    public static void main(String[] args){
+        Arraylist al=new Arraylist();
+        al.add(100);
+        al.add(200);
+        al.add(300);
+        al.add(400);
+        al.add(500);
+        System.out.println(al);
+        int a=al.get(0);
+        System.out.println(a);   /*error because a is an integer but al is not declared as integer itis an Object type*/
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+runtime polymorphism(method over riding)
+method over riding(two different classes ,same method name,same method signature,different discription)
+method signature
+compiletime polymorphism
+metod overloading(same class,same method name ,diff method sign,diff implementation)
+
+class animal{
+    public void no_legs(int abc){
+        System.out.println("Animal has"+abc+"legs");
+    }
+    public void no_legs(){
+        System.out.println("Animal has 4 legs");
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+class animal{
+    public int add(int a,int b){
+        return a+b;
+    }
+    public int add(int a,int b,int c){
+       return a+b+c;
+    }
+    public int add(String a,String b){
+       return a+b;
+    }
+}
+public class Sample{
+    public static void main(String[] args){
+        animal a=new animal();
+        System.out.println(a.add(10,20));
+        System.out.println(a.add(10,20,30));
+        System.out.println(a.add("10","20"));
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+class shape{
+    public void area(){
+        System.out.println("area of methods:");
+    }
+}
+class area extends shape{
+    public int square(int r){
+        return r*r;
+    }
+    public int rectangle(int l,int b){
+       return l*b;
+    }
+    public int circle(int r){
+        pi=3.14;
+       return pi*r**2;
+    }
+    public int cube(int r){
+        
+       return r*r**2;
+    }
+}
+class Sample{
+    public static void main(String[] args){
+        shape a=new shape();
+        System.out.println(a.square(10));
+        System.out.println(a.rectangle(10,20));
+        System.out.println(a.circle(4));
+        System.out.println(a.cube(4));
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+abstraction class
+method ....declaration present but no description..(definition for method is required)
+
+public static finite in interface
+static and non static finite and non finite in abstract
+
+methods..normal and abstract methods in abstraction..
+no obj canbe created directly for abstraction class
+-------------------------------------------------------------------------------------------------------
+
+abstract class animal{
+    abstract public void welcome(){
+        
+    }
+    public void print(){
+        System.out.println("hello");
+    }
+}
+
+class Sample{
+    public static void main(String[] args){
+        
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
+
+abstract class animal{
+    abstract public void create_user(){
+        
+    }
+    public void print(){
+        System.out.println("hello");
+    }
+    
+}
+
+class dog extends animal{
+    public void create_user(){
+        System.out.println("welcome to java training");
+    }
+}
+
+class Sample{
+    public static void main(String[] args){
+        
+    }
+}
+
+
+
+
+
+---------------------------------------------------------------------------------------------
+
+throw ...the developer manually creates an exception
+throws...in some scenerioes the system shows the exception called the IOException
+
+
+---------------------------------------------------------------------------------------------
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Sample{
+    public static void main(String[] args) throws IOException{
+        /*File file_ob= new File("path to file);
+          Scanner sc=new Scanner(file_ob);*/
+        Scanner sc=new Scanner(System.in);
+        
+        try{
+            int age=sc.nextInt();
+            if(age<18){
+                throw new Exception("Age under 18");
+            }
+            System.out.println("valid age"+age);
+        catch{
+            System.out.println(e.getMessage());
+        }
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------
+
+e.getMessage()
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Sample{
+    public static void main(String[] args) throws IOException{
+        /*File file_ob= new File("path to file);
+          Scanner sc=new Scanner(file_ob);*/
+        Scanner sc=new Scanner(System.in);
+        
+        try{
+            /*int age=sc.nextInt();
+            if(age<18){
+                throw new Exception("Age under 18");
+            }
+            System.out.println("valid age"+age);*/
+            int a=1/0;
+        catch{
+            System.out.println(e.getMessage());
+        }
+        }
+    }
+}
+----------------------------------------------------------------------------
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Sample{
+    public static void main(String[] args) throws IOException{
+        /*File file_ob= new File("path to file);
+          Scanner sc=new Scanner(file_ob);*/
+        Scanner sc=new Scanner(System.in);
+        
+        try{
+            /*int age=sc.nextInt();
+            if(age<18){
+                throw new Exception("Age under 18");
+            }
+            System.out.println("valid age"+age);*/
+            int a=1/0;
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        }
+    }
+}
+
+-----------------------------------------------------------------------
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Sample{
+    public static void main(String[] args) throws IOException{
+        /*File file_ob= new File("path to file);
+          Scanner sc=new Scanner(file_ob);*/
+        Scanner sc=new Scanner(System.in);
+        
+        try{
+            int age=sc.nextInt();
+            if(age<18){
+                throw new Exception("Age under 18");
+            }
+            else{
+                //continue execution
+            }
+            System.out.println("valid age");
+            int a=1/0;
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+COLLECTION FRAME WORK
+1. LIST --> ARRAYLIST
+2. MAP--> HASHMAP,LINKEDHASHMAP,TREEMAP
+3. SET--> HASHSET,LINKEDHASHSET,TREESET
+4. COLLECTION (AS OBJECT)
+----------------------------------------------------------------------------------------
+**Data Stuctures**
+1. stacks
+2. queues
+3. linked list
+4. double linked list
+5. trees
+6. graphs
+-------------------------
+stck
+1 push
+pop
+peek
+isempty
+-----------
+1 under flow
+2.over flow 
+-------------------------
+import java.util.Stack;
+
+class Main {
+    public static void main(String[] args) {
+        Stack<Integer> numbers= new Stack<>();
+
+        // Add elements to Stack
+        numbers.push(10);
+        numbers.push(20);
+        numbers.push(30);
+        numbers.push(40);
+        Stack num =new Stack();
+        num.push(numbers.pop());
+        num.push(numbers.pop());
+        num.push(numbers.pop());
+        num.push(numbers.pop());
+
+        System.out.println("Stack: " + num);
+    }
+}
+----------------------------------------------------------------
+implementation of stack
+
+import java.util.ArrayList;
+
+class Stack{
+    ArrayList<Integer> stk = new ArrayList<Integer>();
+    int size = 5;
+     
+    public void push(int element){
+        if(stk.size() == size){
+            System.out.println("Overflow: stack is full");
+        } else {
+            stk.add(element);
+        }
+    }
+    public void pop(){
+        if(isEmpty()){
+            System.out.println("Underflow: stack is empty");
+        } else {
+            stk.remove(stk.size()-1);
+        }
+    }
+    public int peek(){
+        if(!isEmpty()){
+            return stk.get(stk.size() - 1);
+        } else {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+    }
+    public boolean isEmpty(){
+        if(stk.size() == 0){
+            return true;
+        }
+        return false;
+    }
+    public void printStack(){
+        System.out.println(stk);
+    }
+}
+
+public class Sample{
+    public static void main(String[] args) {
+       
+
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+linked list...two parts...data part and memory/address part...
+
+array has direct access but linked list cannot access directly
+insertion and deletion is hard in linked list
+linear datastructure
+
+
+class Node{
+    int data;   //to store data
+    Node next;  //to store next address
+    public Node(int value){
+        this.data=value;
+        next=null;
+        
+    }
+}
+class LinkedList{
+    public Node add_start(Node head,int data){
+        Node new_node=new Node(data);
+        Node temp=head;
+        head=new_node;
+        head.next=temp;
+        return head;
+        
+    }
+    public void addElement(Node head,int data){
+        Node new_node=new Node(data);
+        Node cur=head;
+        while(cur.next!= null){
+            cur=cur.next;
+            
+        }
+        cur.next=new_node;
+        
+    }
+    public void deleteElement(Node head){
+        Node cur=head;
+        while(cur.next.next!= null){
+            cur=cur.next;
+            
+        }
+        cur.next=null;
+        
+    }
+    public void printlist(Node head){
+        Node cur=head;
+        while(cur!= null){
+            
+            System.out.print(cur.data+"-->");
+            cur=cur.next;
+        }
+        System.out.println();
+        
+    }
+    
+}
+
+public class sample
+{
+	public static void main(String[] args){
+		LinkedList ll=new LinkedList();
+		Node head=new Node(10);
+		ll.addElement(head,20);
+		ll.addElement(head,30);
+		ll.addElement(head,40);
+        ll.addElement(head,50);
+        ll.addElement(head,60);
+        ll.printlist(head);
+        
+        ll.deleteElement(head);
+		ll.printlist(head);
+        ll.add_start(head, 70);
+        ll.printlist(head);
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DOUBLE LINKEDLIST
+
+
+
+class Node{
+    int data;   //to store data
+    Node next;  //to store next address
+    Node prev;
+    public Node(int value){
+        this.data=value;
+        next=null;
+        prev=null;
+        
+    }
+}
+class DoubleLinkedList{
+    public void addElement(Node head,int data){
+        Node new_node=new Node(data);
+        Node cur=head;
+        while(cur.next!=null){
+            cur=cur.next;
+        }
+        cur.next=new_node;
+        new_node.prev=cur;
+
+        
+    }
+    public void deleteElement(Node head){
+        Node cur=head;
+        while(cur.next.next!= null){
+            cur=cur.next;
+            
+        }
+        cur.next=null;
+        cur.prev=null;
+       
+    }
+    public void printlist(Node head){
+        Node cur=head;
+        while(cur!= null){
+            
+            System.out.print(cur.data+"-->");
+            cur=cur.next;
+        }
+        System.out.println();
+        
+    }
+    
+    
+}
+
+public class sample
+{
+	public static void main(String[] args){
+		DoubleLinkedList ll=new DoubleLinkedList();
+		Node head=new Node(10);
+		ll.addElement(head,20);
+		ll.addElement(head,30);
+		ll.addElement(head,40);
+        ll.addElement(head,50);
+        ll.addElement(head,60);
+        ll.printlist(head);
+        ll.deleteElement(head);
+        ll.printlist(head);
+	}
+}
+
+----------------------------------------------------------------------------------------------------------
+
+IN-ORDER --->  LEFT-ROOT-RIGHT
+PRE-ORDER --->  ROOT-LEFT-RIGHT
+POST-ORDER --->  LEFT-RIGHT-ROOT
+
+                 10
+          5             15
+      2       7     13      17
+
+IN-ORDER-   2,5,7,10,13,15,17
+PRE-ORDER-  10,5,2,7,15,13,17
+POST-ORDER- 2,7,5,13,17,15,10
+
+-----------------------------------------------------------------------------------------------------------
+HASH_FUNCTION=NUM%8
+H(K)=VALUE
+H(1)=1
+H(5)=5
+H(9)=1
+H(16)=0
+H(32)=0                                            TWO ELEMENTS HAVE SAME HASH VALUES(16,32)(1,9)..CALLED COLLISION
+
+KEY: VALUE
+0:16,32
+1:1,9   LL
+2:
+3:
+4:
+5:5
+6:
+7:
+---------------------------------------------------------------------------------------------------------------------------------------------
+python - oops
+
+class Student:
+    name= "kjaaj"
+    age=30
+
+ob =Student()
+print(ob.name)
+print(ob.age)
+-----------------------
+class Student:
+    name= "kjaaj"
+    age=30
+    def greeting(self,name):
+        print("hello",name)
+
+ob =Student()
+ob.greeting("shshh")
+-----------------------------------
+class Student:
+    
+    def __init__(self,name):
+        self.name=name
+      
+    def say_hello  (self):
+        print(self.name)  
+
+ob1 =Student("mike")
+ob2=Student("akdj")
+on3 =Student("varu")
+
+ob1.say_hello()
+-----------------------------------------------------------
+bikesfam={
+    "classic" :
+    {
+    "name":"ab",
+    "model":"clasi",
+    "year":2000
+    },
+    "meteor" :
+    {
+    "name":"cd",
+    "model":"reo",
+    "year":2022
+    },
+    "hunter" :
+    {
+    "name":"ef",
+    "model":"mala",
+    "year":2023
+    },
+
+
+}
+ 
+x=input("enter:")
+want={"available":x}
+if x in bikesfam:
+    print(want)
+    print(bikesfam[x])
+    
+-----------------------------------------------------
+class parent_one:
+    def message(self):
+        print("in class one")
+class parent_two:
+    def message(self):
+        print("in class two")
+class Child(parent_one,parent_two):
+    pass
+ob=Child()
+ob.message()
+
+------------------------------------------------------------------
+class child_one:
+    def message(self):
+        print("i M FFIRST one")
+class child_TWO:
+    def message(self):
+        print("I AM SECONDclass two")
+
+class parent(child_one,child_TWO):
+    pass
+ob=child_TWO()
+ob.message()
+---------------------------------------------------
+abc class= abstract base class
+ex=import abc
+
+from abc import ABC,abstractmethod
+class Example(ABC):
+    @abstractmethod
+    def method_one(self):
+        print("hey you idiot!!")
+        for i in range(10):
+            print(i,'ninnu champadam')
+class Student(Example):
+    def method_one(self):
+        print("hello")
+ob=Student()
+ob.method_one()
+
+
+in java we have abstract keyword which takes care of conditions of abstract method ..but in python we dont have any keywords to define the abstract method
+so the compiler doesnt care the defition written inthe abstract method.
+
+
+
+===============================================================
+TREES
+
+BIARY TREE
+EVERY NODE SOULD HAVE 2 OR 0 CHILDREN..elements on left to the root is small and elements on right to the root is biger than root
+BINARY SEARCH TREE 
+IT SHOULD SATISFY THE BINARY TREE CONDITION AND ALSO THE ELEMENTS OF NODES SHOULD ADJUST BASED ON ROOT VALUE
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+28-03-2023
+
+Level order:
+Graphs:
+main types of graphs-
+1.directed graph
+2.undirected graph
+undirected graphs has two types-
+1.regular
+2.weighted
+directed graphs has two types-
+1.regular directed graphs
+2.weighted regular graphs
+adjacency matrix-
+nodes-10,20,30,40,50
+    10  20 30 40  50
+10  0   1  0   1   1
+20  1   0  0   1   0
+30  0   0  0   1   1
+40  1   1  1   0   1
+50  1   0  1   1   0
+10:20,40,50
+20:10,40
+30:40,50
+40:10,20,30,50
+50:10,30,40
+create a dictionary to access elements connected to each other easily
+degree is of two types-
+in degree(incoming direction)#in the case of directed graph
+outdegree(outgoing direction)
+there are two graph traversals-
+1.breadth first search and
+2.depth first search
+Breadth First Search-
+we use queues in breadth first search traversal because no need of recursion like in dfs so that we use queues instead of stack
+we can start from any node/vertice but in trees we have to start from root node.
+There is no correct output in bfs as we are starting from different nodes.
+def bfs(graph,start):
+    q=[start]
+    visited=[start]
+    while len(q)!=0:
+        ele=q.pop(0)
+        print(ele)
+        for i in graph[ele]:
+            if i not in visited:
+                q.append(i)
+                visited.append(i)
+        
+graph={10:[20,40,50],20:[10,40],30:[40,50],40:[10,20,30,50],50:[10,40,30]}
+bfs(graph,20)    
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+functions types:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
