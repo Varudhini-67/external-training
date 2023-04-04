@@ -1201,7 +1201,129 @@ graph={10:[20,40,50],20:[10,40],30:[40,50],40:[10,20,30,50],50:[10,40,30]}
 bfs(graph,20)    
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
-functions types:
+***web development***
+-----------------------
+--> meta data : searches something there will be a blue dark sentence . below that we can see light text sentence which is metadata.
+--> charset : encoding
+--> <meta http-equiv="X-UA-Compatible" content="IE=edge"> this tag will support latest technology in chrome
+--> viewport: a website which can adjust in all screen size of laptops,phones or tabs.
+--> * means class
+--> # means id
+codes:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="this is a web">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        this is para
+    </p>
+    <b>
+        hfgtfhfgy ghyghe.
+    </b>
+    <b>
+        ugfyegfg jbygfyh.
+    </b>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <b>bold</b>
+    <i>italic tag</i>
+   <p> <u> underline word</u>
+</p>
+<a href="www.google.com">click me</a>
+<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F04%2F23%2F22%2F00%2Ftree-736885__480.jpg&tbnid=9SPhZ2nyEGps3M&vet=12ahUKEwjrgpuhvo_-AhUa9XMBHUfkBZEQMygCegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&docid=Ba_eiczVaD9-zM&w=771&h=480&q=image&ved=2ahUKEwjrgpuhvo_-AhUa9XMBHUfkBZEQMygCegUIARC8AQ" alt="random"/>
+
+    
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: bisque; color:crimson;"  style="display:table;">
+    <center>
+    <div style="align-items: center;" box-sizing="checkbox" width="50" >
+    <div>
+        <h1 style="color: blue;" style="text-decoration:wavy;">Form elements</h1>
+    </div>
+    <div style="text-align: center;">
+        <label for="user_name" style="display: flex;">Username: </label>
+        <input ID="user" type="text" style="display: flex;" placeholder="ENTER NAME">
+        
+    </div>
+    <div style="text-align: center;">
+        <label for="user_name" style="display: flex;">Passward: </label>
+        <input ID="user" type="text" style="display: flex;" placeholder="ENTER Passward">
+
+    </div>
+
+    <div style="text-align: center;">
+        <label for="user_name" style="display: flex;">Email: </label>
+        <input ID="user" type="text" style="display: flex;" placeholder="ENTER EMail">
+        
+
+    </div>
+    <div> 
+        <h1>Choose the correct answer</h1>
+        <input id="" name="Q1" type="radio"/> option 1
+        <input id="" name="Q2" type="radio"/> option 2
+        <input id="" name="Q3" type="radio"/> option 3
+        <input id="" name="Q4" type="radio"/> option 4
+    </div>
+    <div>
+        <label for="cars" style="display: flex;"><b>select car</b></label>
+        <select>
+            <option value="" >maruthi</option>
+            <option value="" >bmw</option>
+            <option value="" >benze</option>
+            <option value="" >murolla</option>
+        </select>
+        <div>
+            <input type="range"/>
+        </div>
+        <div>
+            <input type="date"/>
+            <input type="time"/>
+        </div>
+        <div>
+            <input type="file"/>
+        </div>
+        <div>
+            <input type="color"/>
+        </div>
+        <div>
+            <h1>Are you okay</h1>
+            <input type="checkbox"/>
+        </div>
+
+        
+    </div>
+    </div>
+    </center>
+    <div>
+        <p> speak to search</p>
+        <input type="tel"/>
+
+    </div>
+     
+</body>
+</html>
+
 
 
 
